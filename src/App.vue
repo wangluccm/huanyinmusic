@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <Headerlist/>
+    <!-- <Musiclist/> -->
+    <router-view></router-view>
+    <Footerlist />
+    <Forabout />
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script type="text/ecmascript-6">
+//import Musiclist from './pages/Musiclist/Musiclist'
+import Headerlist from './components/Headerlist/Headerlist'
+import Footerlist from './components/Footerlist/Footerlist'
+import Forabout from './components/Forabout/Forabout'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+   
+    name:'app',
+    components:{
+      Headerlist,
+      //Musiclist,
+      Footerlist,
+       Forabout
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus" rel="stylesheet/stylus" scoped>
+body html
+  width 100%
+  height 100%
+  .app
+    width 100%
+    height 100%
+    position absolute
+  
+ 
 </style>
